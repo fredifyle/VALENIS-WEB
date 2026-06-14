@@ -581,10 +581,22 @@ line-height:1.8 !important;
 max-width:none !important;
 }
 
-@media(max-width:900px){
-.ptiles{
-grid-template-columns:1fr !important;
+@media(max-width:1024px){
+.hero{height:58vh!important;min-height:500px!important;align-items:center!important}
+.hc{padding:0 var(--g) 68px!important}
+.hh1{font-size:clamp(38px,5.4vw,62px)!important;line-height:1.02!important;max-width:720px!important}
 }
+
+@media(max-width:767px){
+.hero{min-height:460px!important;height:56vh!important;align-items:center!important}
+.hc{padding:0 24px 52px!important}
+.hh1{font-size:clamp(32px,8.6vw,50px)!important;line-height:1.03!important;max-width:100%!important}
+}
+
+@media(max-width:480px){
+.hero{min-height:430px!important;height:54vh!important;align-items:center!important}
+.hc{padding:0 18px 40px!important}
+.hh1{font-size:clamp(28px,8.8vw,40px)!important;line-height:1.04!important}
 }
 
 .er{
@@ -619,6 +631,22 @@ grid-template-columns:1fr !important;
 .pc-t + .pc-d{
     margin-top:6px !important;
 }
+@media(max-width:900px){
+    .er,
+    .pt,
+    .api{
+        grid-template-columns:1fr !important;
+        gap:24px !important;
+    }
+    .er > div:last-child,
+    .er > div:last-child .bl,
+    #about .bl,
+    #practice .bl{
+        max-width:none !important;
+        width:100% !important;
+    }
+}
+
 @media(max-width:860px){
     .pc-d{max-width:100% !important;}
 }
