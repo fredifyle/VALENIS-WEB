@@ -276,6 +276,27 @@ header.sol .hbg span{background:var(--ink)}
 .qa{font-size:9px;font-weight:400;letter-spacing:.4em;text-transform:uppercase;
   color:rgba(200,175,130,.45)}
 
+/* ── TRANSACTION CAROUSEL ── */
+.txc{position:relative;overflow:hidden}
+.tx-track{display:flex;gap:32px;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 32px 0;margin-left:calc(var(--g) * -1);padding-left:var(--g)}
+.tx-track::-webkit-scrollbar{display:none}
+.tx-card{flex:0 0 calc(33.333% - 22px);scroll-snap-align:start;padding:36px 32px;
+  border:1px solid var(--border);background:var(--stone-pale);min-width:280px}
+.tx-val{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,52px);
+  font-weight:300;color:var(--ink);line-height:1;margin-bottom:12px}
+.tx-type{font-size:8px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;display:block}
+.tx-div{width:20px;height:1px;background:var(--gold);margin-bottom:20px;opacity:.4}
+.tx-mandate{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--ink);
+  margin-bottom:8px;line-height:1.2}
+.tx-sector{font-size:12px;color:var(--mid);margin-bottom:12px;font-weight:500;opacity:1}
+.tx-outcome{font-size:12px;color:var(--mid);line-height:1.7}
+.tx-note{border-top:1px solid var(--border);padding-top:24px}
+
+/* Transaction Experience heading override */
+#transactions .ser{max-width:none!important;}
+
 /* ── CONTACT FORM ── */
 .ct-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border)}
 .ctc{padding:64px 56px}
@@ -355,6 +376,7 @@ footer{background:var(--ink2);border-top:1px solid rgba(200,175,130,.12)}
   .ctc{padding:40px 24px}.fgr{grid-template-columns:1fr}
   #nvo{grid-template-columns:1fr}.nr{display:none}.nl{padding:0 36px}
   .ftop{grid-template-columns:1fr;gap:20px;padding:32px 0}
+  .tx-card{flex:0 0 calc(50% - 16px);min-width:260px}
   .fright,.fcen{justify-content:flex-start}
   .fgrid{grid-template-columns:1fr 1fr;padding:36px 0;gap:28px}
   .fbot{flex-direction:column;gap:16px;padding:24px 0 44px}
@@ -446,6 +468,7 @@ padding:42px 0!important
 @media(max-width:900px){
 .er,.pt{grid-template-columns:1fr!important;gap:24px!important}
 .ser{font-size:40px!important}
+.tx-card{flex:0 0 100%;min-width:280px}
 }
 
 /* True institutional scale - not magazine scale */
@@ -868,6 +891,136 @@ footer .fh{
       <div class="api"><div class="apn" aria-hidden="true"></div><div><div class="apt">Sell-Side Advisory</div><p class="app">We provide strategic and tactical guidance to sell-side events. Our advisory businesses comprise joint ventures, spin-offs and divestitures across our core geographies of Africa, the UAE and Europe.</p></div></div>
       <div class="api"><div class="apn" aria-hidden="true"></div><div><div class="apt">Capital Raises</div><p class="app">Covering debt, equity, mezzanine, strategic and trade finance structures, we assist clients in raising the right capital from the right counterparties at the right time.</p></div></div>
       <div class="api"><div class="apn" aria-hidden="true"></div><div><div class="apt">Relationship Intelligence</div><p class="app">Our institutional investor network spans 50+ pre-qualified investors across Africa, the UAE and Europe. We leverage deep relationships and proprietary intelligence to connect clients with aligned capital partners.</p></div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- TRANSACTION EXPERIENCE — stone pale -->
+<section class="s" id="transactions">
+  <div class="wr"><div class="inn">
+    <div class="er rv" style="margin-bottom:24px">
+      <div>
+        <span class="cap" style="display:block;margin-bottom:20px">Expertise</span>
+        <div class="bar"></div>
+        <h2 class="ser" style="font-size:clamp(28px,3.8vw,58px)">Selected Transaction Experience</h2>
+        <p class="bl tx-note" style="margin-top:10px;color:rgba(28,26,22,.82)">Representative transactions completed across Africa, the Middle East and Europe.</p>
+      </div>
+    </div>
+    <div class="txc rv">
+      <div class="tx-track">
+        <div class="tx-card">
+          <div class="tx-val">$118M</div>
+          <span class="tx-type">CAPITAL RAISING</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Project Finance</div>
+          <div class="tx-sector">Renewable Energy | Africa</div>
+          <div class="tx-outcome">Multi-jurisdictional strategic capital advisory mandate.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$50M</div>
+          <span class="tx-type">CAPITAL STRUCTURING</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Mezzanine Financing</div>
+          <div class="tx-sector">Consumer | Retail</div>
+          <div class="tx-outcome">Structured mezzanine facility for a growth-stage corporate.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$40M</div>
+          <span class="tx-type">CAPITAL RAISING</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Growth Equity</div>
+          <div class="tx-sector">Consumer | Food | Retail</div>
+          <div class="tx-outcome">Strategic capital advisory mandate for regional expansion.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$32M</div>
+          <span class="tx-type">DEBT ADVISORY</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Revolving Credit Facility</div>
+          <div class="tx-sector">Renewable Energy</div>
+          <div class="tx-outcome">Working capital and inventory financing advisory.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$30M</div>
+          <span class="tx-type">RESTRUCTURING (RX)</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Debt Restructuring</div>
+          <div class="tx-sector">Construction & Real Estate</div>
+          <div class="tx-outcome">Balance sheet restructuring and strategic review.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$20M</div>
+          <span class="tx-type">CAPITAL RAISING</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Mezzanine Capital</div>
+          <div class="tx-sector">Industrials</div>
+          <div class="tx-outcome">Multiple institutional term sheets secured.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$10M</div>
+          <span class="tx-type">CAPITAL RAISING</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Growth Equity</div>
+          <div class="tx-sector">Technology</div>
+          <div class="tx-outcome">Technology-enabled business expansion capital.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$5M</div>
+          <span class="tx-type">CAPITAL RAISING</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Growth Equity</div>
+          <div class="tx-sector">Consumer</div>
+          <div class="tx-outcome">Equity and debt financing for regional expansion.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$5M</div>
+          <span class="tx-type">CAPITAL RAISING</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Bridge Financing</div>
+          <div class="tx-sector">Fintech</div>
+          <div class="tx-outcome">Bridge facility and Series A advisory.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$3M</div>
+          <span class="tx-type">BUY-SIDE ADVISORY</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Strategic Acquisition</div>
+          <div class="tx-sector">Fintech</div>
+          <div class="tx-outcome">Minority stake acquisition advisory.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$2M</div>
+          <span class="tx-type">SELL-SIDE ADVISORY</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Acquisition</div>
+          <div class="tx-sector">Food & Agriculture</div>
+          <div class="tx-outcome">Equity stake sale advisory.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$2M</div>
+          <span class="tx-type">CAPITAL RAISING</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Hybrid Capital Raise</div>
+          <div class="tx-sector">Technology</div>
+          <div class="tx-outcome">Equity and structured debt financing.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$1.5M</div>
+          <span class="tx-type">CAPITAL RAISING</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Growth Equity – Series A</div>
+          <div class="tx-sector">Technology</div>
+          <div class="tx-outcome">Early-stage institutional capital raise.</div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-val">$1.5M</div>
+          <span class="tx-type">DEBT ADVISORY</span>
+          <div class="tx-div"></div>
+          <div class="tx-mandate">Revolving Credit Facility</div>
+          <div class="tx-sector">Industrials</div>
+          <div class="tx-outcome">Working capital facility structuring advisory.</div>
+        </div>
+      </div>
     </div>
   </div></div>
 </section>
